@@ -1,5 +1,5 @@
 //
-//  LyricHistoryViewController.swift
+//  LyricSearchViewController.swift
 //  MyLyrics
 //
 //  Created by Jorge Luis Peña López on 12/09/20.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LyricHistoryViewController: UIViewController, Storyboarded {
+class LyricSearchViewController: UIViewController, Storyboarded {
 
-    var coordinator: LyricHistoryFlow?
+    var coordinator: LyricsSceneFlowCoordinatorDependences?
     
-    static func create() -> LyricHistoryViewController {
-        let view = LyricHistoryViewController.instantiate(name: "LyricHomeTabBarController")
+    static func create() -> LyricSearchViewController {
+        let view = LyricSearchViewController.instantiate(name: "LyricHomeTabBarController")
         return view
     }
     
@@ -33,10 +33,7 @@ class LyricHistoryViewController: UIViewController, Storyboarded {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func onBtnDetail(_ sender: Any) {
-        coordinator?.coordinateToLyricDetail()
-    }
-    
 
+    
+    
 }

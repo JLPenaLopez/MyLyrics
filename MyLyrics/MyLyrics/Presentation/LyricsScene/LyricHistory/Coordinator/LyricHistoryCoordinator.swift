@@ -9,13 +9,10 @@
 import Foundation
 import UIKit
 
-protocol LyricHistoryFlow {
-    func coordinateToLyricDetail()
-}
 
-final class LyricHistoryCoordinator: Coordinator, LyricHistoryFlow {
+final class LyricHistoryCoordinator: Coordinator, LyricsSceneFlowCoordinatorDependences {
     
-    private let navigationController: UINavigationController
+    weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -24,11 +21,11 @@ final class LyricHistoryCoordinator: Coordinator, LyricHistoryFlow {
     func start() {
         let vc = LyricHistoryViewController.create()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     func coordinateToLyricDetail() {
-        let coordinateToLyricDetail = LyricDetailCoordinator(navigationController: navigationController)
+        let coordinateToLyricDetail = LyricDetailCoordinator(navigationController: navigationController!)
         coordinate(to: coordinateToLyricDetail)
     }
     

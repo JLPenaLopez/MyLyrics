@@ -1,19 +1,25 @@
 //
-//  LyricSearchViewController.swift
+//  LyricDetailViewController.swift
 //  MyLyrics
 //
-//  Created by Jorge Luis Peña López on 12/09/20.
+//  Created by Jorge Luis Peña López on 13/09/20.
 //  Copyright © 2020 Jorge Dev. All rights reserved.
 //
 
 import UIKit
 
-class LyricSearchViewController: UIViewController, Storyboarded {
+class LyricDetailViewController: UIViewController, Storyboarded {
 
-    static func create() -> LyricSearchViewController {
-        let view = LyricSearchViewController.instantiate()
+    @IBOutlet weak var lblDetail: UILabel!
+    
+    var coordinator: LyricDetailFlow?
+    
+    
+    static func create() -> LyricDetailViewController {
+        let view = LyricDetailViewController.instantiate()
         return view
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +38,4 @@ class LyricSearchViewController: UIViewController, Storyboarded {
     }
     */
 
-    
-    
 }

@@ -21,7 +21,5 @@ class LyricHomeTabBarController: UITabBarController, Storyboarded {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
-

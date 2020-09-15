@@ -75,10 +75,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="ybf-AP-CPl" kind="relationship" relationship="viewControllers" id="OMm-7f-u4w"/>
-                        <segue destination="cra-oa-q9G" kind="relationship" relationship="viewControllers" id="jf1-S5-Y2a"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFV-LX-7mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

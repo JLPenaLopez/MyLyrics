@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
-final class LyricDetailCoordinator: Coordinator {
+protocol LyricDetailFlow {
+    func dismissDetail()
+}
+
+final class LyricDetailCoordinator: Coordinator, LyricDetailFlow {
     
-    private let navigationController: UINavigationController
+    let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -21,5 +25,8 @@ final class LyricDetailCoordinator: Coordinator {
         let vc = LyricDetailViewController.create()
         navigationController.present(vc, animated: true, completion: nil)
     }
-    
+
+    func dismissDetail() {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
 }

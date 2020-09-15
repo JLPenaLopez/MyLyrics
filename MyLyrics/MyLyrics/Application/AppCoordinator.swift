@@ -18,6 +18,8 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+//        let vc = LyricHomeTabBarController.create()
+        
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

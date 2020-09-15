@@ -1,23 +1,21 @@
 //
-//  LyricDetailViewController.swift
+//  LyricHistoryViewController.swift
 //  MyLyrics
 //
-//  Created by Jorge Luis Peña López on 13/09/20.
+//  Created by Jorge Luis Peña López on 12/09/20.
 //  Copyright © 2020 Jorge Dev. All rights reserved.
 //
 
 import UIKit
 
-class LyricDetailViewController: UIViewController, Storyboarded {
+class LyricHistoryViewController: UIViewController, Storyboarded {
 
-    @IBOutlet weak var lblDetail: UILabel!
+    var coordinator: LyricsSceneFlowCoordinatorDependences?
     
-    
-    static func create() -> LyricDetailViewController {
-        let view = LyricDetailViewController.instantiate()
+    static func create() -> LyricHistoryViewController {
+        let view = LyricHistoryViewController.instantiate(name: "LyricHomeTabBarController")
         return view
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +33,10 @@ class LyricDetailViewController: UIViewController, Storyboarded {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func onBtnDetail(_ sender: Any) {
+        coordinator?.coordinateToLyricDetail()
+    }
+    
 
 }
