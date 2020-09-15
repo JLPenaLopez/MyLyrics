@@ -13,7 +13,7 @@ class LyricHistoryViewController: UIViewController, Storyboarded {
     var coordinator: LyricsSceneFlowCoordinatorDependences?
     
     static func create() -> LyricHistoryViewController {
-        let view = LyricHistoryViewController.instantiate(name: "LyricHomeTabBarController")
+        let view = LyricHistoryViewController.instantiate()
         return view
     }
     

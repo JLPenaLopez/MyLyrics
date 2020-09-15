@@ -50,9 +50,15 @@
 		3333E43A250DA73A0008BD11 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E439250DA73A0008BD11 /* UseCase.swift */; };
 		3333E443250DAC350008BD11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3333E445250DAC350008BD11 /* Localizable.strings */; };
 		3333E46C250DBFF90008BD11 /* LyricSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E46B250DBFF90008BD11 /* LyricSearchViewController.swift */; };
-		3333E46E250DC0100008BD11 /* HistoryLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E46D250DC0100008BD11 /* HistoryLyricViewController.swift */; };
+		3333E46E250DC0100008BD11 /* LyricHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */; };
 		333FB56F250F346B00D65916 /* LyricHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FB56E250F346B00D65916 /* LyricHistoryCoordinator.swift */; };
 		33A8F03425104A5700EC1E60 /* LyricSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */; };
+		33A8F0372510525200EC1E60 /* LyricHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */; };
+		33A8F0392510527500EC1E60 /* LyricSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */; };
+		33A8F03B2510590400EC1E60 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F03A2510590400EC1E60 /* Theme.xcassets */; };
+		33A8F03D251062FD00EC1E60 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03C251062FD00EC1E60 /* RoundButton.swift */; };
+		33A8F040251067EC00EC1E60 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03F251067EC00EC1E60 /* UIColor.swift */; };
+		33A8F04225106BD900EC1E60 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F04125106BD900EC1E60 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,9 +108,15 @@
 		3333E444250DAC350008BD11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3333E446250DAC700008BD11 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3333E46B250DBFF90008BD11 /* LyricSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchViewController.swift; sourceTree = "<group>"; };
-		3333E46D250DC0100008BD11 /* HistoryLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLyricViewController.swift; sourceTree = "<group>"; };
+		3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryViewController.swift; sourceTree = "<group>"; };
 		333FB56E250F346B00D65916 /* LyricHistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryCoordinator.swift; sourceTree = "<group>"; };
 		33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchCoordinator.swift; sourceTree = "<group>"; };
+		33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricHistoryViewController.storyboard; sourceTree = "<group>"; };
+		33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricSearchViewController.storyboard; sourceTree = "<group>"; };
+		33A8F03A2510590400EC1E60 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		33A8F03C251062FD00EC1E60 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		33A8F03F251067EC00EC1E60 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		33A8F04125106BD900EC1E60 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,9 +267,11 @@
 		3320B2E7250F10C6005CFBDA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				33A8F03E251067C900EC1E60 /* Extension */,
 				3320B2EC250F14EB005CFBDA /* Protocol */,
 				3320B2E8250F1109005CFBDA /* Obsevable.swift */,
 				3320B2EA250F13D5005CFBDA /* ProgressLoading.swift */,
+				33A8F03C251062FD00EC1E60 /* RoundButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -364,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				3333E425250D9C0B0008BD11 /* Assets.xcassets */,
+				33A8F03A2510590400EC1E60 /* Theme.xcassets */,
 				3333E427250D9C0B0008BD11 /* LaunchScreen.storyboard */,
 				3333E42A250D9C0B0008BD11 /* Info.plist */,
 				3333E445250DAC350008BD11 /* Localizable.strings */,
@@ -482,7 +497,8 @@
 		33A8F0262510448500EC1E60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3333E46D250DC0100008BD11 /* HistoryLyricViewController.swift */,
+				3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */,
+				33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				3333E46B250DBFF90008BD11 /* LyricSearchViewController.swift */,
+				33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +563,15 @@
 				33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33A8F03E251067C900EC1E60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				33A8F03F251067EC00EC1E60 /* UIColor.swift */,
+				33A8F04125106BD900EC1E60 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,9 +633,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A8F0372510525200EC1E60 /* LyricHistoryViewController.storyboard in Resources */,
 				3333E429250D9C0B0008BD11 /* LaunchScreen.storyboard in Resources */,
+				33A8F0392510527500EC1E60 /* LyricSearchViewController.storyboard in Resources */,
 				3320B2FA250F2915005CFBDA /* LyricDetailViewController.storyboard in Resources */,
 				3333E443250DAC350008BD11 /* Localizable.strings in Resources */,
+				33A8F03B2510590400EC1E60 /* Theme.xcassets in Resources */,
 				3333E426250D9C0B0008BD11 /* Assets.xcassets in Resources */,
 				3333E424250D9C060008BD11 /* LyricHomeTabBarController.storyboard in Resources */,
 			);
@@ -646,12 +675,15 @@
 				3320B2AF250EACB6005CFBDA /* NetworkService.swift in Sources */,
 				33A8F03425104A5700EC1E60 /* LyricSearchCoordinator.swift in Sources */,
 				3320B2CE250ED657005CFBDA /* LyricResponseCoreDataStorage.swift in Sources */,
+				33A8F04225106BD900EC1E60 /* UIView.swift in Sources */,
+				33A8F040251067EC00EC1E60 /* UIColor.swift in Sources */,
 				3320B295250E892B005CFBDA /* LyricRepository.swift in Sources */,
 				3320B29B250E9218005CFBDA /* LyricHistoryUseCase.swift in Sources */,
 				3320B2EE250F1564005CFBDA /* Storyboarded.swift in Sources */,
 				3320B2E9250F1109005CFBDA /* Obsevable.swift in Sources */,
 				3320B2DB250EE511005CFBDA /* LyricRequestEntityMapping.swift in Sources */,
 				3320B2F8250F2798005CFBDA /* LyricDetailViewController.swift in Sources */,
+				33A8F03D251062FD00EC1E60 /* RoundButton.swift in Sources */,
 				3333E41D250D9C060008BD11 /* AppDelegate.swift in Sources */,
 				3320B2FC250F2A75005CFBDA /* LyricDetailCoordinator.swift in Sources */,
 				3320B299250E8C7D005CFBDA /* LyricQuery.swift in Sources */,
@@ -660,7 +692,7 @@
 				3320B293250E891E005CFBDA /* LyricsHistoryRepository.swift in Sources */,
 				3320B2B1250EACB6005CFBDA /* NetworkConfig.swift in Sources */,
 				3320B2DF250EF1DA005CFBDA /* LyricHistoryCoreDataStorage.swift in Sources */,
-				3333E46E250DC0100008BD11 /* HistoryLyricViewController.swift in Sources */,
+				3333E46E250DC0100008BD11 /* LyricHistoryViewController.swift in Sources */,
 				3320B2B8250EB5DF005CFBDA /* DefaultLyricRepository.swift in Sources */,
 				3320B2EB250F13D5005CFBDA /* ProgressLoading.swift in Sources */,
 			);

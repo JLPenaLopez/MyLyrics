@@ -13,7 +13,7 @@ class LyricSearchViewController: UIViewController, Storyboarded {
     var coordinator: LyricsSceneFlowCoordinatorDependences?
     
     static func create() -> LyricSearchViewController {
-        let view = LyricSearchViewController.instantiate(name: "LyricHomeTabBarController")
+        let view = LyricSearchViewController.instantiate()
         return view
     }
     
