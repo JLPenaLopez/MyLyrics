@@ -303,7 +303,7 @@
 		3320B2F4250F271C005CFBDA /* LyricSearch */ = {
 			isa = PBXGroup;
 			children = (
-				33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */,
+				33A8F03525104AF800EC1E60 /* Coordinator */,
 				33A8F02C251044DD00EC1E60 /* ViewModel */,
 				33A8F02A251044CC00EC1E60 /* View */,
 			);
@@ -536,6 +536,14 @@
 		33A8F0302510451400EC1E60 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33A8F03525104AF800EC1E60 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
