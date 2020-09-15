@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        //        let vc = ViewController();
 //        let navigation = UINavigationController(rootViewController: vc);
+        let navigationBarApparence = UINavigationBar.appearance()
+        navigationBarApparence.barTintColor = .accent
+        navigationBarApparence.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.background]
+        
         window = UIWindow(frame: UIScreen.main.bounds);
 //        window?.rootViewController = navigation;
 //        window?.makeKeyAndVisible();

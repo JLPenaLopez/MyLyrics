@@ -5,4 +5,13 @@
   Created by Jorge Luis Peña López on 12/09/20.
   Copyright © 2020 Jorge Dev. All rights reserved.
 */
-"myLyrics" = "Mis Liricas";
+"myLyrics" = "Mis Líricas";
+"search" = "Buscar";
+"history" = "Historial";
+"lyric" = "Lírica";
+"searchLyric" = "Buscar lírica de canción";
+"artist" = "Artista";
+"song" = "Canción";
+"lastLyricFound" = "Última lírica encontrada";
+"songTitle" = "Titulo de canción";
+"searchDate" = "Fecha de búsqueda";

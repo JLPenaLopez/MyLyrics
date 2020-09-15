@@ -27,24 +27,31 @@ final class LyricsSceneFlowCoordinator: Coordinator {
         
         vc.coordinator = self
         
-//        let historyNavigationController = UINavigationController()
-//        let lyricHistoryCoordinator = LyricHistoryCoordinator(navigationController: historyNavigationController)
+//        vc.tabBar.barTintColor = .red
+//        vc.tabBar.tintColor = .black
+//        vc.tabBar.unselectedItemTintColor = .green
         
-//        let topRatedNavigationController = UINavigationController()
-//        topRatedNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-//        let topRatedCoordinator = TopRatedCoordinator(navigationController: topRatedNavigationController)
+        vc.tabBar.tintColor = .accent
         
         let lyricSearchNavigationController = UINavigationController()
-        lyricSearchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        let lyricSearchTabBarItem = UITabBarItem(title: NSLocalizedString("search", comment: ""), image: UIImage(named: "search"), tag: 0)
+        lyricSearchTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+
+        lyricSearchNavigationController.tabBarItem = lyricSearchTabBarItem
+//        lyricSearchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         let lyricSearchCoordinator = LyricSearchCoordinator(navigationController: lyricSearchNavigationController)
         
         let a = UITabBarItem(tabBarSystemItem: .history, tag: 1);
         a.title = "América"
-        let b = UITabBarItem(title: NSLocalizedString("myLyrics", comment: ""), image: UIImage(named: "clock"), tag: 1)
-        b.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+        let lyricHistoryTabBarItem = UITabBarItem(title: NSLocalizedString("myLyrics", comment: ""), image: UIImage(named: "clock"), tag: 1)
+        lyricHistoryTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+        let c = UITabBarItem(title: NSLocalizedString("myLyrics", comment: ""), image: UIImage(named: "clock"), selectedImage: UIImage(named: "clock"))
+        c.tag = 1
+        
+        
         
         let lyricHistoryNavigationController = UINavigationController()
-        lyricHistoryNavigationController.tabBarItem = b // UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        lyricHistoryNavigationController.tabBarItem = lyricHistoryTabBarItem // UITabBarItem(tabBarSystemItem: .history, tag: 1)
         let lyricHistoryCoordinator = LyricHistoryCoordinator(navigationController: lyricHistoryNavigationController)
         vc.viewControllers = [lyricSearchNavigationController, lyricHistoryNavigationController]
         

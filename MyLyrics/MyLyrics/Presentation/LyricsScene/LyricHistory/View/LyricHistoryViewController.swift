@@ -20,6 +20,7 @@ class LyricHistoryViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = NSLocalizedString("history", comment: "")
         // Do any additional setup after loading the view.
     }
     

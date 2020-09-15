@@ -6,3 +6,12 @@
   Copyright © 2020 Jorge Dev. All rights reserved.
 */
 "myLyrics" = "My Lyrics";
+"search" = "Search";
+"history" = "History";
+"lyric" = "Lyric";
+"searchLyric" = "Search song lyrics";
+"artist" = "Artist";
+"song" = "Song";
+"lastLyricFound" = "Last lyric found";
+"songTitle" = "Song title";
+"searchDate" = "Search date";

@@ -30,11 +30,27 @@ extension UIColor {
         )
     }
     
-    @objc class var Background: UIColor {
+    @objc class var background: UIColor {
         if #available(iOS 11.0, *) {
             return UIColor(named: "Background")!
         } else {
             return UIColor(hex: "F7FFF7")
+        }
+    }
+    
+    @objc class var accent: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "Accent")!
+        } else {
+            return UIColor(hex: "1A535C")
+        }
+    }
+    
+    @objc class var tint: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "Tint")!
+        } else {
+            return UIColor(hex: "FF6B6B")
         }
     }
     
