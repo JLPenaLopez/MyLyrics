@@ -65,6 +65,10 @@
 		335C952425116DB1008E1D3E /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952325116DB1008E1D3E /* AppDIContainer.swift */; };
 		335C952725118867008E1D3E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952625118867008E1D3E /* ErrorMessage.swift */; };
 		335C952925119B80008E1D3E /* LyricHistoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952825119B80008E1D3E /* LyricHistoryItemViewModel.swift */; };
+		335C95312511C627008E1D3E /* MyLyricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C95302511C627008E1D3E /* MyLyricsUITests.swift */; };
+		335C953B2511C710008E1D3E /* LyricsSceneFoundLyricUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C953A2511C710008E1D3E /* LyricsSceneFoundLyricUITests.swift */; };
+		335C953D2511CD40008E1D3E /* LyricSceneNotFoundLyricUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C953C2511CD40008E1D3E /* LyricSceneNotFoundLyricUITests.swift */; };
+		338AD4FC2511D46300A2CFC2 /* LyricSceneShowLastLyricFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AD4FB2511D46300A2CFC2 /* LyricSceneShowLastLyricFound.swift */; };
 		33A8F03425104A5700EC1E60 /* LyricSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */; };
 		33A8F0372510525200EC1E60 /* LyricHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */; };
 		33A8F0392510527500EC1E60 /* LyricSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */; };
@@ -73,6 +77,16 @@
 		33A8F040251067EC00EC1E60 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03F251067EC00EC1E60 /* UIColor.swift */; };
 		33A8F04225106BD900EC1E60 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F04125106BD900EC1E60 /* UIView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		335C95332511C627008E1D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3333E411250D9C060008BD11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3333E418250D9C060008BD11;
+			remoteInfo = MyLyrics;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3320B28F250E87EE005CFBDA /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -136,6 +150,12 @@
 		335C952325116DB1008E1D3E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		335C952625118867008E1D3E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		335C952825119B80008E1D3E /* LyricHistoryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryItemViewModel.swift; sourceTree = "<group>"; };
+		335C952E2511C626008E1D3E /* MyLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		335C95302511C627008E1D3E /* MyLyricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLyricsUITests.swift; sourceTree = "<group>"; };
+		335C95322511C627008E1D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		335C953A2511C710008E1D3E /* LyricsSceneFoundLyricUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsSceneFoundLyricUITests.swift; sourceTree = "<group>"; };
+		335C953C2511CD40008E1D3E /* LyricSceneNotFoundLyricUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSceneNotFoundLyricUITests.swift; sourceTree = "<group>"; };
+		338AD4FB2511D46300A2CFC2 /* LyricSceneShowLastLyricFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSceneShowLastLyricFound.swift; sourceTree = "<group>"; };
 		33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchCoordinator.swift; sourceTree = "<group>"; };
 		33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricHistoryViewController.storyboard; sourceTree = "<group>"; };
 		33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricSearchViewController.storyboard; sourceTree = "<group>"; };
@@ -147,6 +167,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		3333E416250D9C060008BD11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		335C952B2511C626008E1D3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				3333E41B250D9C060008BD11 /* MyLyrics */,
+				335C952F2511C627008E1D3E /* MyLyricsUITests */,
 				3333E41A250D9C060008BD11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -383,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				3333E419250D9C060008BD11 /* MyLyrics.app */,
+				335C952E2511C626008E1D3E /* MyLyricsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -526,6 +555,34 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		335C952F2511C627008E1D3E /* MyLyricsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				335C95382511C69C008E1D3E /* Presentation */,
+				335C95302511C627008E1D3E /* MyLyricsUITests.swift */,
+				335C95322511C627008E1D3E /* Info.plist */,
+			);
+			path = MyLyricsUITests;
+			sourceTree = "<group>";
+		};
+		335C95382511C69C008E1D3E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				335C95392511C6A6008E1D3E /* LyricScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		335C95392511C6A6008E1D3E /* LyricScene */ = {
+			isa = PBXGroup;
+			children = (
+				335C953A2511C710008E1D3E /* LyricsSceneFoundLyricUITests.swift */,
+				335C953C2511CD40008E1D3E /* LyricSceneNotFoundLyricUITests.swift */,
+				338AD4FB2511D46300A2CFC2 /* LyricSceneShowLastLyricFound.swift */,
+			);
+			path = LyricScene;
+			sourceTree = "<group>";
+		};
 		33A8F0232510443300EC1E60 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +714,24 @@
 			productReference = 3333E419250D9C060008BD11 /* MyLyrics.app */;
 			productType = "com.apple.product-type.application";
 		};
+		335C952D2511C626008E1D3E /* MyLyricsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 335C95352511C627008E1D3E /* Build configuration list for PBXNativeTarget "MyLyricsUITests" */;
+			buildPhases = (
+				335C952A2511C626008E1D3E /* Sources */,
+				335C952B2511C626008E1D3E /* Frameworks */,
+				335C952C2511C626008E1D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				335C95342511C627008E1D3E /* PBXTargetDependency */,
+			);
+			name = MyLyricsUITests;
+			productName = MyLyricsUITests;
+			productReference = 335C952E2511C626008E1D3E /* MyLyricsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -669,6 +744,10 @@
 				TargetAttributes = {
 					3333E418250D9C060008BD11 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					335C952D2511C626008E1D3E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 3333E418250D9C060008BD11;
 					};
 				};
 			};
@@ -687,6 +766,7 @@
 			projectRoot = "";
 			targets = (
 				3333E418250D9C060008BD11 /* MyLyrics */,
+				335C952D2511C626008E1D3E /* MyLyricsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -704,6 +784,13 @@
 				33A8F03B2510590400EC1E60 /* Theme.xcassets in Resources */,
 				3333E426250D9C0B0008BD11 /* Assets.xcassets in Resources */,
 				3333E424250D9C060008BD11 /* LyricHomeTabBarController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		335C952C2511C626008E1D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +861,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		335C952A2511C626008E1D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				335C953B2511C710008E1D3E /* LyricsSceneFoundLyricUITests.swift in Sources */,
+				335C953D2511CD40008E1D3E /* LyricSceneNotFoundLyricUITests.swift in Sources */,
+				338AD4FC2511D46300A2CFC2 /* LyricSceneShowLastLyricFound.swift in Sources */,
+				335C95312511C627008E1D3E /* MyLyricsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		335C95342511C627008E1D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3333E418250D9C060008BD11 /* MyLyrics */;
+			targetProxy = 335C95332511C627008E1D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3333E422250D9C060008BD11 /* LyricHomeTabBarController.storyboard */ = {
@@ -961,6 +1067,42 @@
 			};
 			name = Release;
 		};
+		335C95362511C627008E1D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlpenalopez.MyLyricsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyLyrics;
+			};
+			name = Debug;
+		};
+		335C95372511C627008E1D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jlpenalopez.MyLyricsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyLyrics;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -978,6 +1120,15 @@
 			buildConfigurations = (
 				3333E42E250D9C0B0008BD11 /* Debug */,
 				3333E42F250D9C0B0008BD11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		335C95352511C627008E1D3E /* Build configuration list for PBXNativeTarget "MyLyricsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				335C95362511C627008E1D3E /* Debug */,
+				335C95372511C627008E1D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

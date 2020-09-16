@@ -21,6 +21,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzT-26-wq1">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="lblDetailTitleSongLyric"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -59,6 +60,9 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="viewLyricDetail">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="Dtd-sX-wqR" firstAttribute="bottom" secondItem="CpV-2D-uqT" secondAttribute="bottom" constant="16" id="0dO-TK-brD"/>
                             <constraint firstItem="Dtd-sX-wqR" firstAttribute="trailing" secondItem="CpV-2D-uqT" secondAttribute="trailing" constant="16" id="PfE-WM-iTP"/>

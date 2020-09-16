@@ -32,6 +32,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="34"/>
                                                 <color key="backgroundColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="txtArtist"/>
                                                 <color key="textColor" red="0.10196078431372549" green="0.32549019607843138" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -54,6 +55,7 @@
                                                 <rect key="frame" x="0.0" y="50" width="366" height="34"/>
                                                 <color key="backgroundColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="txtSongTitle"/>
                                                 <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -74,6 +76,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-aw-yT6">
                                                 <rect key="frame" x="0.0" y="100" width="366" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="btnSearchLyric"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="eNZ-EL-WrV"/>
                                                 </constraints>
@@ -178,6 +181,7 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhS-Zk-cmE">
                                                         <rect key="frame" x="342" y="26" width="24" height="24"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="btnShowLastLyricFound"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="24" id="iFw-pL-yio"/>
                                                             <constraint firstAttribute="height" constant="24" id="oyS-PT-Rem"/>
