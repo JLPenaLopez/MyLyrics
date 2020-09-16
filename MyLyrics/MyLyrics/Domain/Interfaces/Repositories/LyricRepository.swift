@@ -10,5 +10,5 @@ import Foundation
 
 protocol LyricRepository {
     func fetchLyric(query: LyricQuery, completion: @escaping (Result<Lyric, Error>) -> Void)
-    func getLyric(query: LyricQuery, completion: @escaping (Result<Lyric, Error>) -> Void)
+    func getLyric(query: LyricQuery, completion: @escaping (Result<Lyric, Error>) -> Void)    
 }

@@ -16,13 +16,22 @@ protocol LyricDetailFlow {
 final class LyricDetailCoordinator: Coordinator, LyricDetailFlow {
     
     let navigationController: UINavigationController
+    let lyricQuery: LyricQuery
+    private let appDIContainer: LyricsSceneDIContainer
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController,
+         appDIContainer: LyricsSceneDIContainer,
+         lyricQuery: LyricQuery) {
+        
         self.navigationController = navigationController
+        self.appDIContainer = appDIContainer
+        self.lyricQuery = lyricQuery
     }
     
     func start() {
-        let vc = LyricDetailViewController.create()
+        let viewModel = LyricDetailViewModel(lyricQuery: lyricQuery,
+                                             getLyricUseCase: appDIContainer.getGetLyricUseCase())
+        let vc = LyricDetailViewController.create(with: viewModel)
         navigationController.present(vc, animated: true, completion: nil)
     }
 

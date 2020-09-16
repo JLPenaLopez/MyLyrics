@@ -10,6 +10,8 @@ import UIKit
 
 class LyricHistoryViewController: UIViewController, Storyboarded {
 
+    @IBOutlet weak var tblViewLyrics: UITableView!
+    
     var coordinator: LyricsSceneFlowCoordinatorDependences?
     
     static func create() -> LyricHistoryViewController {
@@ -20,23 +22,14 @@ class LyricHistoryViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = NSLocalizedString("history", comment: "")
-        // Do any additional setup after loading the view.
+        configView()
+//        binding(to: viewModel)
+//        loadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    @IBAction func onBtnDetail(_ sender: Any) {
-        coordinator?.coordinateToLyricDetail()
+    func configView() {
+        tblViewLyrics.tableFooterView = UIView();
+        tblViewLyrics.separatorStyle = .singleLine;
     }
     
 

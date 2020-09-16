@@ -12,7 +12,11 @@ struct APIEndpoints {
     
     static func getLyric(with lyricRequestDTO: LyricRequestDTO) -> Endpoint<LyricResponseDTO> {
         
-        let path = "v1/\(lyricRequestDTO.artist)/\(lyricRequestDTO.title)"
+        let artist = lyricRequestDTO.artist.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? lyricRequestDTO.artist
+        let title = lyricRequestDTO.title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? lyricRequestDTO.title
+        
+        let path = "v1/\(artist)/\(title)"
+        print("APIEndpoints >> path \(path)")
         
         return Endpoint(path: path, method: .get)
     }

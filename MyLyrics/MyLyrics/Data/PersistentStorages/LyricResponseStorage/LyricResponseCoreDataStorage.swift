@@ -21,7 +21,7 @@ final class LyricResponseCoreDataStorage {
         
         let request: NSFetchRequest = LyricRequestEntity.fetchRequest()
         
-        request.predicate = NSPredicate(format: "%K = %@ AND %K = %d",
+        request.predicate = NSPredicate(format: "%K = %@ AND %K = %@",
                                         #keyPath(LyricRequestEntity.artist), requestDto.artist,
                                         #keyPath(LyricRequestEntity.title), requestDto.title)
         return request
@@ -39,7 +39,6 @@ final class LyricResponseCoreDataStorage {
             print("LyricResponseCoreDataStorage :: deleteResponse \(error)")
         }
     }
-    
 }
 
 extension LyricResponseCoreDataStorage: LyricResponseStorage {
@@ -63,8 +62,8 @@ extension LyricResponseCoreDataStorage: LyricResponseStorage {
         lyricCoreDataStorage.performBackgroundTask { (context) in
             
             do {
-                self.deleteResponse(for: requestDto, in: context)
                 
+                self.deleteResponse(for: requestDto, in: context)
                 let requestEntity = requestDto.toEntity(in: context)
                 requestEntity.response = responseDto.toEntity(in: context)
 
@@ -74,5 +73,4 @@ extension LyricResponseCoreDataStorage: LyricResponseStorage {
             }
         }
     }
-    
 }

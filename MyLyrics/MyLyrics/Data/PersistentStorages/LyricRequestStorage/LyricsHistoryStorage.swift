@@ -10,4 +10,5 @@ import Foundation
 
 protocol LyricsHistoryStorage {
     func fetchHistory(completion: @escaping (Result<[LyricQuery], Error>) -> Void)
+    func getLast(completion: @escaping (Result<LyricQuery?, Error>) -> Void)
 }

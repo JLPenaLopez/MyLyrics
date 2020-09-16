@@ -8,7 +8,12 @@
 
 import Foundation
 
-final class GetLyricUseCase: SearchLyricUseCase {
+protocol GetLyricUseCase {
+    func execute(requestValue: SearchLyricUseCaseRequestValue,
+                 completion: @escaping (Result<Lyric, Error>) -> Void)
+}
+
+final class DefaultGetLyricUseCase: GetLyricUseCase {
     
     private let lyricRepository: LyricRepository
     private let lyricsHistoryRepository: LyricsHistoryRepository

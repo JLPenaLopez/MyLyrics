@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 protocol LyricsSceneFlowCoordinatorDependences {
-    func coordinateToLyricDetail()
+    func coordinateToLyricDetail(lyricQuery: LyricQuery)
 }
 
 //final class LyricsSceneFlowCoordinator: Coordinator, LyricsSceneFlowCoordinatorDependences {
 final class LyricsSceneFlowCoordinator: Coordinator {
 
     var navigationController: UINavigationController
+    private let appDIContainer: LyricsSceneDIContainer
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, appDIContainer: LyricsSceneDIContainer) {
         self.navigationController = navigationController
+        self.appDIContainer = appDIContainer
     }
     
     func start() {
@@ -39,7 +41,8 @@ final class LyricsSceneFlowCoordinator: Coordinator {
 
         lyricSearchNavigationController.tabBarItem = lyricSearchTabBarItem
 //        lyricSearchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        let lyricSearchCoordinator = LyricSearchCoordinator(navigationController: lyricSearchNavigationController)
+        let lyricSearchCoordinator = LyricSearchCoordinator(navigationController: lyricSearchNavigationController,
+                                                            appDIContainer: appDIContainer)
         
         let a = UITabBarItem(tabBarSystemItem: .history, tag: 1);
         a.title = "América"
@@ -52,7 +55,8 @@ final class LyricsSceneFlowCoordinator: Coordinator {
         
         let lyricHistoryNavigationController = UINavigationController()
         lyricHistoryNavigationController.tabBarItem = lyricHistoryTabBarItem // UITabBarItem(tabBarSystemItem: .history, tag: 1)
-        let lyricHistoryCoordinator = LyricHistoryCoordinator(navigationController: lyricHistoryNavigationController)
+        let lyricHistoryCoordinator = LyricHistoryCoordinator(navigationController: lyricHistoryNavigationController,
+                                                              appDIContainer: appDIContainer)
         vc.viewControllers = [lyricSearchNavigationController, lyricHistoryNavigationController]
         
         vc.modalPresentationStyle = .overFullScreen

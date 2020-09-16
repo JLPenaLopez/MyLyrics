@@ -11,10 +11,12 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     
+    private let appDIContainer: AppDIContainer
     let window: UIWindow
     
-    init(window: UIWindow) {
+    init(window: UIWindow, appDIContainer: AppDIContainer) {
         self.window = window
+        self.appDIContainer = appDIContainer
     }
     
     func start() {
@@ -24,8 +26,10 @@ class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
+        let lyricSceneDIContainer = appDIContainer.getLyricsSceneDIContainer()
 //        let startCoordinator = StartCoordinator(navigationController: navigationController)
-        let lyricsSceneFlowCoordinator = LyricsSceneFlowCoordinator(navigationController: navigationController)
+        let lyricsSceneFlowCoordinator = LyricsSceneFlowCoordinator(navigationController: navigationController,
+                                                                    appDIContainer: lyricSceneDIContainer)
         coordinate(to: lyricsSceneFlowCoordinator)
     }
 }

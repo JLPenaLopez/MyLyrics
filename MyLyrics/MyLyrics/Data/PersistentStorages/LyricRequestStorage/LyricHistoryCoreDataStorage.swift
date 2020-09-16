@@ -13,8 +13,17 @@ final class LyricHistoryCoreDataStorage {
     
     private let lyricCoreDataStorage: LyricsCoreDataStorage
     
-    init(lyricCoreDataStorage: LyricsCoreDataStorage) {
+    init(lyricCoreDataStorage: LyricsCoreDataStorage = LyricsCoreDataStorage.sharedInstance) {
         self.lyricCoreDataStorage = lyricCoreDataStorage
+    }
+    
+    private func fetchLast() -> NSFetchRequest<LyricRequestEntity> {
+        let request: NSFetchRequest = LyricRequestEntity.fetchRequest()
+        
+        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(LyricRequestEntity.dateRequest),
+                                                    ascending: false)]
+        request.fetchLimit = 1
+        return request
     }
     
 }
@@ -31,6 +40,31 @@ extension LyricHistoryCoreDataStorage: LyricsHistoryStorage {
                 let result = try context.fetch(request).map { $0.toDomain() }
 
                 completion(.success(result))
+            } catch {
+                completion(.failure(CoreDataStorageError.fetchError(error)))
+            }
+        }
+    }
+    
+    func getLast(completion: @escaping (Result<LyricQuery?, Error>) -> Void) {
+        
+        lyricCoreDataStorage.performBackgroundTask { (context) in
+            
+            do {
+                let fetchRequest = self.fetchLast()
+//                let requestEntity = try context.fetch(fetchRequest).map({ (entity) -> LyricRequestEntity in
+//                    print("----getLast------")
+//                    print("\(entity.artist ?? "A")")
+//                    print("\(entity.title ?? "B")")
+//                    print("\(String(describing: entity.dateRequest))")
+//                    print("\(entity.dateRequest ?? Date())")
+//                    return entity
+//                })
+                let requestEntity = try context.fetch(fetchRequest).first
+                
+                completion(.success(requestEntity?.toDomain()))
+//                let a = LyricQuery(artist: "Hola", title: "Mundo", dateRequest: Date())
+//                completion(.success(a))
             } catch {
                 completion(.failure(CoreDataStorageError.fetchError(error)))
             }

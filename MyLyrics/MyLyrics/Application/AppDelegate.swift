@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let appDIContainer = AppDIContainer()    
     var window: UIWindow?
     var coordinator: AppCoordinator?
 
@@ -32,11 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds);
 //        window?.rootViewController = navigation;
 //        window?.makeKeyAndVisible();
-        coordinator = AppCoordinator(window: window!)
+        coordinator = AppCoordinator(window: window!, appDIContainer: appDIContainer)
         coordinator?.start()
         
         return true
     }
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        LyricsCoreDataStorage.sharedInstance.saveContext()
+    }
+    
 }
 

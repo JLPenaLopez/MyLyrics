@@ -23,7 +23,10 @@ final class DefaultLyricsHistoryRepository {
 extension DefaultLyricsHistoryRepository: LyricsHistoryRepository {
     
     func fetchHistory(completion: @escaping (Result<[LyricQuery], Error>) -> Void) {
-        self.lyricHistoryStorage.fetchHistory(completion: completion)
+        lyricHistoryStorage.fetchHistory(completion: completion)
     }
     
+    func getLastLyricQuery(completion: @escaping (Result<LyricQuery?, Error>) -> Void) {        
+        lyricHistoryStorage.getLast(completion: completion)
+    }
 }

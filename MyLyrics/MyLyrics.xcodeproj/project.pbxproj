@@ -52,6 +52,19 @@
 		3333E46C250DBFF90008BD11 /* LyricSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E46B250DBFF90008BD11 /* LyricSearchViewController.swift */; };
 		3333E46E250DC0100008BD11 /* LyricHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */; };
 		333FB56F250F346B00D65916 /* LyricHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FB56E250F346B00D65916 /* LyricHistoryCoordinator.swift */; };
+		335C950D25111D5A008E1D3E /* LyricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C950C25111D5A008E1D3E /* LyricTableViewCell.swift */; };
+		335C950F2511225F008E1D3E /* LyricSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C950E2511225F008E1D3E /* LyricSearchViewModel.swift */; };
+		335C951125112279008E1D3E /* LyricHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C951025112279008E1D3E /* LyricHistoryViewModel.swift */; };
+		335C95132511228A008E1D3E /* LyricDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C95122511228A008E1D3E /* LyricDetailViewModel.swift */; };
+		335C95152511293E008E1D3E /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C95142511293E008E1D3E /* ConnectionError.swift */; };
+		335C9517251129FA008E1D3E /* DataTransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C9516251129FA008E1D3E /* DataTransferError.swift */; };
+		335C951925114424008E1D3E /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C951825114424008E1D3E /* AlertPresentable.swift */; };
+		335C951D251154CF008E1D3E /* GetLastLyricQueryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C951C251154CF008E1D3E /* GetLastLyricQueryUseCase.swift */; };
+		335C9520251160B3008E1D3E /* LyricsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C951F251160B3008E1D3E /* LyricsSceneDIContainer.swift */; };
+		335C952225116B8E008E1D3E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952125116B8E008E1D3E /* Date.swift */; };
+		335C952425116DB1008E1D3E /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952325116DB1008E1D3E /* AppDIContainer.swift */; };
+		335C952725118867008E1D3E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952625118867008E1D3E /* ErrorMessage.swift */; };
+		335C952925119B80008E1D3E /* LyricHistoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C952825119B80008E1D3E /* LyricHistoryItemViewModel.swift */; };
 		33A8F03425104A5700EC1E60 /* LyricSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */; };
 		33A8F0372510525200EC1E60 /* LyricHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */; };
 		33A8F0392510527500EC1E60 /* LyricSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */; };
@@ -110,6 +123,19 @@
 		3333E46B250DBFF90008BD11 /* LyricSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchViewController.swift; sourceTree = "<group>"; };
 		3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryViewController.swift; sourceTree = "<group>"; };
 		333FB56E250F346B00D65916 /* LyricHistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryCoordinator.swift; sourceTree = "<group>"; };
+		335C950C25111D5A008E1D3E /* LyricTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricTableViewCell.swift; sourceTree = "<group>"; };
+		335C950E2511225F008E1D3E /* LyricSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchViewModel.swift; sourceTree = "<group>"; };
+		335C951025112279008E1D3E /* LyricHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryViewModel.swift; sourceTree = "<group>"; };
+		335C95122511228A008E1D3E /* LyricDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricDetailViewModel.swift; sourceTree = "<group>"; };
+		335C95142511293E008E1D3E /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		335C9516251129FA008E1D3E /* DataTransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferError.swift; sourceTree = "<group>"; };
+		335C951825114424008E1D3E /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		335C951C251154CF008E1D3E /* GetLastLyricQueryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastLyricQueryUseCase.swift; sourceTree = "<group>"; };
+		335C951F251160B3008E1D3E /* LyricsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsSceneDIContainer.swift; sourceTree = "<group>"; };
+		335C952125116B8E008E1D3E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		335C952325116DB1008E1D3E /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		335C952625118867008E1D3E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		335C952825119B80008E1D3E /* LyricHistoryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricHistoryItemViewModel.swift; sourceTree = "<group>"; };
 		33A8F03325104A5700EC1E60 /* LyricSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricSearchCoordinator.swift; sourceTree = "<group>"; };
 		33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricHistoryViewController.storyboard; sourceTree = "<group>"; };
 		33A8F0382510527500EC1E60 /* LyricSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LyricSearchViewController.storyboard; sourceTree = "<group>"; };
@@ -280,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				3320B2ED250F1564005CFBDA /* Storyboarded.swift */,
+				335C951825114424008E1D3E /* AlertPresentable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -389,6 +416,7 @@
 		3333E431250DA66E0008BD11 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				335C952525118831008E1D3E /* Util */,
 				3320B2C5250ECC26005CFBDA /* CoreDataStorage */,
 				3320B2C3250ECB6A005CFBDA /* PersistentStorages */,
 				3320B2B6250EB506005CFBDA /* Repositories */,
@@ -423,6 +451,7 @@
 				3320B28F250E87EE005CFBDA /* AppConfiguration.swift */,
 				3320B2E5250F08A1005CFBDA /* AppCoordinator.swift */,
 				3320B2E2250F086B005CFBDA /* Base */,
+				335C951E25116091008E1D3E /* DIContainer */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -443,6 +472,7 @@
 				3320B29C250E931C005CFBDA /* SearchLyricUseCase.swift */,
 				3320B2E0250EFE89005CFBDA /* GetLyricUseCase.swift */,
 				3320B29A250E9218005CFBDA /* LyricHistoryUseCase.swift */,
+				335C951C251154CF008E1D3E /* GetLastLyricQueryUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -466,8 +496,34 @@
 		3333E43B250DA77D0008BD11 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				335C95142511293E008E1D3E /* ConnectionError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		335C950B25111BF1008E1D3E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				335C950C25111D5A008E1D3E /* LyricTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		335C951E25116091008E1D3E /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				335C952325116DB1008E1D3E /* AppDIContainer.swift */,
+				335C951F251160B3008E1D3E /* LyricsSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		335C952525118831008E1D3E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				335C952625118867008E1D3E /* ErrorMessage.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		33A8F0232510443300EC1E60 /* View */ = {
@@ -490,6 +546,7 @@
 		33A8F0252510443C00EC1E60 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				335C95122511228A008E1D3E /* LyricDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -497,6 +554,7 @@
 		33A8F0262510448500EC1E60 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				335C950B25111BF1008E1D3E /* Cell */,
 				3333E46D250DC0100008BD11 /* LyricHistoryViewController.swift */,
 				33A8F0362510525200EC1E60 /* LyricHistoryViewController.storyboard */,
 			);
@@ -506,6 +564,8 @@
 		33A8F0272510448D00EC1E60 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				335C951025112279008E1D3E /* LyricHistoryViewModel.swift */,
+				335C952825119B80008E1D3E /* LyricHistoryItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -530,6 +590,7 @@
 		33A8F02C251044DD00EC1E60 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				335C950E2511225F008E1D3E /* LyricSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -570,6 +631,8 @@
 			children = (
 				33A8F03F251067EC00EC1E60 /* UIColor.swift */,
 				33A8F04125106BD900EC1E60 /* UIView.swift */,
+				335C9516251129FA008E1D3E /* DataTransferError.swift */,
+				335C952125116B8E008E1D3E /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -653,6 +716,8 @@
 			files = (
 				3320B2E6250F08A1005CFBDA /* AppCoordinator.swift in Sources */,
 				333FB56F250F346B00D65916 /* LyricHistoryCoordinator.swift in Sources */,
+				335C951125112279008E1D3E /* LyricHistoryViewModel.swift in Sources */,
+				335C9520251160B3008E1D3E /* LyricsSceneDIContainer.swift in Sources */,
 				3320B2DD250EED8D005CFBDA /* LyricsHistoryStorage.swift in Sources */,
 				3333E43A250DA73A0008BD11 /* UseCase.swift in Sources */,
 				3320B2BE250EB968005CFBDA /* LyricRequestDTO.swift in Sources */,
@@ -661,6 +726,7 @@
 				3320B2C0250EB97A005CFBDA /* LyricResponseDTO.swift in Sources */,
 				3320B29D250E931C005CFBDA /* SearchLyricUseCase.swift in Sources */,
 				3333E421250D9C060008BD11 /* LyricHomeTabBarController.swift in Sources */,
+				335C950F2511225F008E1D3E /* LyricSearchViewModel.swift in Sources */,
 				3320B297250E8A90005CFBDA /* Lyric.swift in Sources */,
 				3320B2B0250EACB6005CFBDA /* Endpoint.swift in Sources */,
 				3320B2CA250ED037005CFBDA /* LyricsCoreDataStorage.swift in Sources */,
@@ -670,23 +736,32 @@
 				3333E46C250DBFF90008BD11 /* LyricSearchViewController.swift in Sources */,
 				3320B2F2250F21E8005CFBDA /* LyricsSceneFlowCoordinator.swift in Sources */,
 				3320B2CC250ED53C005CFBDA /* LyricResponseStorage.swift in Sources */,
+				335C952425116DB1008E1D3E /* AppDIContainer.swift in Sources */,
 				3320B2E4250F0877005CFBDA /* Coordinator.swift in Sources */,
 				3320B2E1250EFE89005CFBDA /* GetLyricUseCase.swift in Sources */,
 				3320B2AF250EACB6005CFBDA /* NetworkService.swift in Sources */,
+				335C952225116B8E008E1D3E /* Date.swift in Sources */,
 				33A8F03425104A5700EC1E60 /* LyricSearchCoordinator.swift in Sources */,
 				3320B2CE250ED657005CFBDA /* LyricResponseCoreDataStorage.swift in Sources */,
 				33A8F04225106BD900EC1E60 /* UIView.swift in Sources */,
+				335C9517251129FA008E1D3E /* DataTransferError.swift in Sources */,
+				335C951925114424008E1D3E /* AlertPresentable.swift in Sources */,
 				33A8F040251067EC00EC1E60 /* UIColor.swift in Sources */,
 				3320B295250E892B005CFBDA /* LyricRepository.swift in Sources */,
 				3320B29B250E9218005CFBDA /* LyricHistoryUseCase.swift in Sources */,
 				3320B2EE250F1564005CFBDA /* Storyboarded.swift in Sources */,
+				335C952725118867008E1D3E /* ErrorMessage.swift in Sources */,
 				3320B2E9250F1109005CFBDA /* Obsevable.swift in Sources */,
 				3320B2DB250EE511005CFBDA /* LyricRequestEntityMapping.swift in Sources */,
 				3320B2F8250F2798005CFBDA /* LyricDetailViewController.swift in Sources */,
 				33A8F03D251062FD00EC1E60 /* RoundButton.swift in Sources */,
 				3333E41D250D9C060008BD11 /* AppDelegate.swift in Sources */,
+				335C952925119B80008E1D3E /* LyricHistoryItemViewModel.swift in Sources */,
 				3320B2FC250F2A75005CFBDA /* LyricDetailCoordinator.swift in Sources */,
+				335C951D251154CF008E1D3E /* GetLastLyricQueryUseCase.swift in Sources */,
 				3320B299250E8C7D005CFBDA /* LyricQuery.swift in Sources */,
+				335C950D25111D5A008E1D3E /* LyricTableViewCell.swift in Sources */,
+				335C95132511228A008E1D3E /* LyricDetailViewModel.swift in Sources */,
 				3320B2C2250EBDB7005CFBDA /* APIEndpoints.swift in Sources */,
 				3320B290250E87EE005CFBDA /* AppConfiguration.swift in Sources */,
 				3320B293250E891E005CFBDA /* LyricsHistoryRepository.swift in Sources */,
@@ -694,6 +769,7 @@
 				3320B2DF250EF1DA005CFBDA /* LyricHistoryCoreDataStorage.swift in Sources */,
 				3333E46E250DC0100008BD11 /* LyricHistoryViewController.swift in Sources */,
 				3320B2B8250EB5DF005CFBDA /* DefaultLyricRepository.swift in Sources */,
+				335C95152511293E008E1D3E /* ConnectionError.swift in Sources */,
 				3320B2EB250F13D5005CFBDA /* ProgressLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

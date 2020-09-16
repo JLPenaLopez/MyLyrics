@@ -30,6 +30,7 @@ extension LyricRequestDTO {
         let entity: LyricRequestEntity = .init(context: context)
         entity.artist = artist
         entity.title = title
+        entity.dateRequest = dateRequest
         return entity
     }
 }

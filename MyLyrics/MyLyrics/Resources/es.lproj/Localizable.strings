@@ -15,3 +15,7 @@
 "lastLyricFound" = "Última lírica encontrada";
 "songTitle" = "Titulo de canción";
 "searchDate" = "Fecha de búsqueda";
+"noInternetConnection" = "Tu conexión a internet es mala o inestable, por favor verifica tu conexión";
+"lyricNotFound" = "No se pudo encontrar la lírica de tu canción, por favor verifica los datos que ingresaste o intenta con otros datos";
+"accept" = "Aceptar";
+"error" = "Error";

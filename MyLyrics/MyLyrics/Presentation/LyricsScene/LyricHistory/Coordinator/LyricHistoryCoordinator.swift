@@ -13,9 +13,11 @@ import UIKit
 final class LyricHistoryCoordinator: Coordinator, LyricsSceneFlowCoordinatorDependences {
     
     weak var navigationController: UINavigationController?
+    private let appDIContainer: LyricsSceneDIContainer
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, appDIContainer: LyricsSceneDIContainer) {
         self.navigationController = navigationController
+        self.appDIContainer = appDIContainer
     }
     
     func start() {
@@ -24,8 +26,10 @@ final class LyricHistoryCoordinator: Coordinator, LyricsSceneFlowCoordinatorDepe
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    func coordinateToLyricDetail() {
-        let coordinateToLyricDetail = LyricDetailCoordinator(navigationController: navigationController!)
+    func coordinateToLyricDetail(lyricQuery: LyricQuery) {
+        let coordinateToLyricDetail = LyricDetailCoordinator(navigationController: navigationController!,
+                                                             appDIContainer: appDIContainer,
+                                                             lyricQuery: lyricQuery)
         coordinate(to: coordinateToLyricDetail)
     }
     

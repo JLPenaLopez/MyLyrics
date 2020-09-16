@@ -11,4 +11,11 @@ import Foundation
 struct LyricRequestDTO: Encodable {
     let artist: String
     let title: String
+    let dateRequest: Date
+}
+
+extension LyricRequestDTO {
+    func toDomain() -> LyricQuery {
+        return .init(artist: artist, title: title, dateRequest: dateRequest)
+    }
 }

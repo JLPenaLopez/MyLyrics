@@ -15,3 +15,7 @@
 "lastLyricFound" = "Last lyric found";
 "songTitle" = "Song title";
 "searchDate" = "Search date";
+"noInternetConnection" = "Your internet connection is bad or unstable, please check your connection";
+"lyricNotFound" = "The lyric of your song could not be found, please verify the data you entered or try other data";
+"accept" = "OK";
+"error" = "Error";
