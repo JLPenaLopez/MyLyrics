@@ -11,6 +11,4 @@ import Foundation
 protocol LyricsHistoryRepository {
     func fetchHistory(completion: @escaping (Result<[LyricQuery], Error>) -> Void)
     func getLastLyricQuery(completion: @escaping (Result<LyricQuery?, Error>) -> Void)
-//    func saveLyric(lyric: Lyric, completion: @escaping (Result<[Lyric], Error>) -> Void)
-//    func getLastLyric(completion: @escaping (Result<Lyric, Error>) -> Void)
 }

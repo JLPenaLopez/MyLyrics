@@ -21,7 +21,8 @@ final class LyricHistoryCoordinator: Coordinator, LyricsSceneFlowCoordinatorDepe
     }
     
     func start() {
-        let vc = LyricHistoryViewController.create()
+        let viewModel = LyricHistoryViewModel(lyricHistoryUseCase: appDIContainer.getLyricHistoryUseCase())
+        let vc = LyricHistoryViewController.create(with: viewModel)
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: false)
     }

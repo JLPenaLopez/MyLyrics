@@ -8,19 +8,19 @@
 
 import Foundation
 
-final class LyricHistoryUseCase: UseCase {
+protocol LyricHistoryUseCase {
+    func execute(completion: @escaping (Result<[LyricQuery], Error>) -> Void)
+}
+
+final class DefaultLyricHistoryUseCase: LyricHistoryUseCase {
     
-    typealias ResultValue = (Result<[LyricQuery], Error>)
-    
-    private let completion: (ResultValue) -> Void
     private let lyricHistoryRepository: LyricsHistoryRepository
     
-    init(lyricHistoryRepository: LyricsHistoryRepository, completion: @escaping (ResultValue) -> Void) {
+    init(lyricHistoryRepository: LyricsHistoryRepository) {
         self.lyricHistoryRepository = lyricHistoryRepository
-        self.completion = completion
     }
     
-    func start() {
+    func execute(completion: @escaping (Result<[LyricQuery], Error>) -> Void) {
         lyricHistoryRepository.fetchHistory(completion: completion)
     }
 }

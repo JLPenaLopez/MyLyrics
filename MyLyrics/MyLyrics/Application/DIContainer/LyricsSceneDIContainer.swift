@@ -49,11 +49,9 @@ final class LyricsSceneDIContainer {
                                       lyricsHistoryRepository: getLyricsHistoryRepository())
     }
     
-    func getLyricHistoryUseCase(completion: @escaping (LyricHistoryUseCase.ResultValue) -> Void) -> UseCase {
-        return LyricHistoryUseCase(lyricHistoryRepository: getLyricsHistoryRepository(),
-                                   completion: completion)
+    func getLyricHistoryUseCase() -> LyricHistoryUseCase {
+        return DefaultLyricHistoryUseCase(lyricHistoryRepository: getLyricsHistoryRepository())
     }
-        
 
     func getGetLastLyricQueryUseCase() -> GetLastLyricQueryUseCase {
         return DefaultGetLastLyricQueryUseCase(lyricsHistoryRepository: getLyricsHistoryRepository ())

@@ -52,19 +52,8 @@ extension LyricHistoryCoreDataStorage: LyricsHistoryStorage {
             
             do {
                 let fetchRequest = self.fetchLast()
-//                let requestEntity = try context.fetch(fetchRequest).map({ (entity) -> LyricRequestEntity in
-//                    print("----getLast------")
-//                    print("\(entity.artist ?? "A")")
-//                    print("\(entity.title ?? "B")")
-//                    print("\(String(describing: entity.dateRequest))")
-//                    print("\(entity.dateRequest ?? Date())")
-//                    return entity
-//                })
                 let requestEntity = try context.fetch(fetchRequest).first
-                
                 completion(.success(requestEntity?.toDomain()))
-//                let a = LyricQuery(artist: "Hola", title: "Mundo", dateRequest: Date())
-//                completion(.success(a))
             } catch {
                 completion(.failure(CoreDataStorageError.fetchError(error)))
             }

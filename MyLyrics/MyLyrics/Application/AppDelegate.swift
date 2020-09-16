@@ -16,23 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        //        guard let vc = storyboard.instantiateInitialViewController() as? TabViewController else {
-//        guard let vc = storyboard.instantiateViewController(withIdentifier: "LyricHomeTabBarController") as? TabBarController else {
-//
-//            fatalError("Cannot instantiate initial view controller from storyboard with name ")
-//        }
-//
-//        //        let vc = ViewController();
-//        let navigation = UINavigationController(rootViewController: vc);
+
         let navigationBarApparence = UINavigationBar.appearance()
         navigationBarApparence.barTintColor = .accent
         navigationBarApparence.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.background]
         
-        window = UIWindow(frame: UIScreen.main.bounds);
-//        window?.rootViewController = navigation;
-//        window?.makeKeyAndVisible();
+        window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = AppCoordinator(window: window!, appDIContainer: appDIContainer)
         coordinator?.start()
         

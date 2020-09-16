@@ -14,15 +14,18 @@ class LyricTableViewCell: UITableViewCell {
     @IBOutlet weak var lblArtist: UILabel!
     @IBOutlet weak var lblSearchDate: UILabel!
     
+    private var viewModel: LyricHistoryItemViewModel!
+    static let reuseIdentifier = String(describing: LyricTableViewCell.self)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setup(with viewModel: LyricHistoryItemViewModel) {
+        self.viewModel = viewModel
+        lblSongTitle.text = viewModel.songTitle
+        lblArtist.text = viewModel.artist
+        lblSearchDate.text = viewModel.dateRequest
     }
 
 }

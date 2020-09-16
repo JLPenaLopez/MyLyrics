@@ -26,7 +26,6 @@ class LyricDetailViewController: UIViewController, Storyboarded, AlertPresentabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         configView()
         binding(to: viewModel)
         loadData()
@@ -40,7 +39,6 @@ class LyricDetailViewController: UIViewController, Storyboarded, AlertPresentabl
         viewModel.loading.observe(on: self) { [weak self] in self?.updateLoading($0) }
         viewModel.songLyric.observe(on: self) { [weak self] in self?.showLyric($0) }
         viewModel.error.observe(on: self) { [weak self] in self?.showError($0) }
-
     }
 
     private func loadData() {

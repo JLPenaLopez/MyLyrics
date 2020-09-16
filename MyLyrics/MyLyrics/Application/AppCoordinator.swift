@@ -20,14 +20,12 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-//        let vc = LyricHomeTabBarController.create()
         
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
         let lyricSceneDIContainer = appDIContainer.getLyricsSceneDIContainer()
-//        let startCoordinator = StartCoordinator(navigationController: navigationController)
         let lyricsSceneFlowCoordinator = LyricsSceneFlowCoordinator(navigationController: navigationController,
                                                                     appDIContainer: lyricSceneDIContainer)
         coordinate(to: lyricsSceneFlowCoordinator)

@@ -21,7 +21,7 @@ protocol LyricSearchViewModelOutput {
     var error: Observable<String> { get }
     var loading: Observable<Bool> { get set }
     var lyricQuery: Observable<LyricQuery?> { get }
-//    var isEmpty: Bool { get }
+    var lyricQueryLast: Observable<LyricQuery?> { get }
     var textTitleFormSearch: String { get }
     var textArtist: String { get }
     var textSongTitle: String { get }
@@ -40,7 +40,6 @@ final class LyricSearchViewModel: LyricSearchViewModelInput, LyricSearchViewMode
     var loading: Observable<Bool> = Observable(false)
     var lyricQuery: Observable<LyricQuery?> = Observable(nil)
     var lyricQueryLast: Observable<LyricQuery?> = Observable(nil)
-//    var isEmpty: Bool
     let screenTitle = NSLocalizedString("myLyrics", comment: "")
     let textTitleFormSearch = NSLocalizedString("searchLyric", comment: "")
     let textArtist = NSLocalizedString("artist", comment: "")
@@ -65,8 +64,6 @@ final class LyricSearchViewModel: LyricSearchViewModelInput, LyricSearchViewMode
         lyricQueryLastUseCase.execute { (result) in
             switch result {
             case .success(let lyricQuery):
-                // TODO: Setear valor a un LyricQuery observable (toca declararlo) para que este en el viewController
-                // lo reciba y con el coordinador llame el detalle, LyricSearchViewModelActions no me serviría
                 self.lyricQueryLast.value = lyricQuery
             case .failure(let error):
                 self.handleError(error: error)

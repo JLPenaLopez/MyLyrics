@@ -42,6 +42,7 @@ class LyricSearchViewController: UIViewController, Storyboarded, AlertPresentabl
     }
     
     func configView() {
+        btnSearchLyric.borderColor = .lightGray
         btnSearchLyric.isEnabled = false
         stackLastLyric.isHidden = true
         title = viewModel.screenTitle
@@ -53,6 +54,15 @@ class LyricSearchViewController: UIViewController, Storyboarded, AlertPresentabl
         lblSongTitle.text = viewModel.textSongTitle
         lblArtist.text = viewModel.textArtist
         lblSearchDate.text = viewModel.textSearchDate
+        
+        let tapItemLastSongFound: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                                  action: #selector(showLyricDetil))
+        stackLastLyric.addGestureRecognizer(tapItemLastSongFound)
+    }
+    
+    private func clearForm() {
+        txtArtist.text = nil
+        txtSongTitle.text = nil
     }
     
     private func binding(to viewModel: LyricSearchViewModel) {
@@ -92,10 +102,11 @@ class LyricSearchViewController: UIViewController, Storyboarded, AlertPresentabl
         }
     }
     
-    private func showDetailCurrentLyricQuery(_ lyricQueryLast: LyricQuery?) {
+    private func showDetailCurrentLyricQuery(_ lyricQueryCurrent: LyricQuery?) {
         
-        if let _ = lyricQueryLast {
-            coordinator?.coordinateToLyricDetail(lyricQuery: lyricQueryLast!)
+        if let _ = lyricQueryCurrent {
+            clearForm()
+            coordinator?.coordinateToLyricDetail(lyricQuery: lyricQueryCurrent!)
         }
     }
     
@@ -104,19 +115,24 @@ class LyricSearchViewController: UIViewController, Storyboarded, AlertPresentabl
         guard let artist = txtArtist.text, !artist.isEmpty,
             let title = txtSongTitle.text, !title.isEmpty
             else {
+                btnSearchLyric.borderColor = .lightGray
                 btnSearchLyric.isEnabled = false
                 return
         }
+        btnSearchLyric.borderColor = .accent
         btnSearchLyric.isEnabled = true
     }
     
+    @objc private func showLyricDetil() {
+        coordinator?.coordinateToLyricDetail(lyricQuery: viewModel.lyricQueryLast.value!)
+    }
     
     @IBAction func onBtnSearchLyric(_ sender: Any) {
         viewModel.didSearch(artist: txtArtist.text ?? "", title: txtSongTitle.text ?? "")
     }
 
     @IBAction func onBtnViewLastLyric(_ sender: Any) {
-        coordinator?.coordinateToLyricDetail(lyricQuery: viewModel.lyricQueryLast.value!)
+        showLyricDetil()
     }
     
 }

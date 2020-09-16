@@ -16,7 +16,6 @@ struct APIEndpoints {
         let title = lyricRequestDTO.title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? lyricRequestDTO.title
         
         let path = "v1/\(artist)/\(title)"
-        print("APIEndpoints >> path \(path)")
         
         return Endpoint(path: path, method: .get)
     }

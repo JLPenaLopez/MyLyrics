@@ -19,3 +19,4 @@
 "lyricNotFound" = "The lyric of your song could not be found, please verify the data you entered or try other data";
 "accept" = "OK";
 "error" = "Error";
+"errorGettingLyrics" = "An error has occurred while consulting your lyrics, please try again";

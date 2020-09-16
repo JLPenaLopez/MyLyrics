@@ -13,7 +13,6 @@ protocol LyricsSceneFlowCoordinatorDependences {
     func coordinateToLyricDetail(lyricQuery: LyricQuery)
 }
 
-//final class LyricsSceneFlowCoordinator: Coordinator, LyricsSceneFlowCoordinatorDependences {
 final class LyricsSceneFlowCoordinator: Coordinator {
 
     var navigationController: UINavigationController
@@ -25,14 +24,9 @@ final class LyricsSceneFlowCoordinator: Coordinator {
     }
     
     func start() {
+        
         let vc = LyricHomeTabBarController.create()
-        
         vc.coordinator = self
-        
-//        vc.tabBar.barTintColor = .red
-//        vc.tabBar.tintColor = .black
-//        vc.tabBar.unselectedItemTintColor = .green
-        
         vc.tabBar.tintColor = .accent
         
         let lyricSearchNavigationController = UINavigationController()
@@ -40,42 +34,23 @@ final class LyricsSceneFlowCoordinator: Coordinator {
         lyricSearchTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
 
         lyricSearchNavigationController.tabBarItem = lyricSearchTabBarItem
-//        lyricSearchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         let lyricSearchCoordinator = LyricSearchCoordinator(navigationController: lyricSearchNavigationController,
                                                             appDIContainer: appDIContainer)
         
-        let a = UITabBarItem(tabBarSystemItem: .history, tag: 1);
-        a.title = "América"
+        let lyricHistoryNavigationController = UINavigationController()
         let lyricHistoryTabBarItem = UITabBarItem(title: NSLocalizedString("myLyrics", comment: ""), image: UIImage(named: "clock"), tag: 1)
         lyricHistoryTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
-        let c = UITabBarItem(title: NSLocalizedString("myLyrics", comment: ""), image: UIImage(named: "clock"), selectedImage: UIImage(named: "clock"))
-        c.tag = 1
         
-        
-        
-        let lyricHistoryNavigationController = UINavigationController()
-        lyricHistoryNavigationController.tabBarItem = lyricHistoryTabBarItem // UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        lyricHistoryNavigationController.tabBarItem = lyricHistoryTabBarItem
         let lyricHistoryCoordinator = LyricHistoryCoordinator(navigationController: lyricHistoryNavigationController,
                                                               appDIContainer: appDIContainer)
-        vc.viewControllers = [lyricSearchNavigationController, lyricHistoryNavigationController]
         
+        vc.viewControllers = [lyricSearchNavigationController, lyricHistoryNavigationController]
         vc.modalPresentationStyle = .overFullScreen
-//        navigationController.pushViewController(vc, animated: false)
-//        vc.modalPresentationStyle = .fullScreen
-//        navigationController.setViewControllers([vc], animated: false)
-//        navigationController = UINavigationController(rootViewController: vc)
-//        navigationController.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: false, completion: nil)
-//        navigationController.present(vc, animated: false) {
-//            self.coordinate(to: lyricSearchCoordinator)
-//            self.coordinate(to: lyricHistoryCoordinator)
-//        }
+        
         coordinate(to: lyricSearchCoordinator)
         coordinate(to: lyricHistoryCoordinator)
     }
     
-//    func coordinateToLyricDetail() {
-//        let coordinateToLyricDetail = LyricDetailCoordinator(navigationController: navigationController!)
-//        coordinate(to: coordinateToLyricDetail)
-//    }
 }

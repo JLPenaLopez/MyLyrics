@@ -12,7 +12,6 @@ protocol GetLastLyricQueryUseCase {
     func execute(completion: @escaping (Result<LyricQuery?, Error>) -> Void)
 }
 
-//final class GetLastLyricQueryUseCase: GetLastLyricQueryableUseCase {
 final class DefaultGetLastLyricQueryUseCase: GetLastLyricQueryUseCase {
     
     private let lyricsHistoryRepository: LyricsHistoryRepository
