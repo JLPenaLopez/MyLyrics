@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  MyLyrics
+
+  Created by Jorge Luis Peña López on 12/09/20.
+  Copyright © 2020 Jorge Dev. All rights reserved.
+*/
+"myLyrics" = "My Lyrics";
+"search" = "Search";
+"history" = "History";
+"lyric" = "Lyric";
+"searchLyric" = "Search song lyrics";
+"artist" = "Artist";
+"song" = "Song";
+"lastLyricFound" = "Last lyric found";
+"songTitle" = "Song title";
+"searchDate" = "Search date";
+"noInternetConnection" = "Your internet connection is bad or unstable, please check your connection";
+"lyricNotFound" = "The lyric of your song could not be found, please verify the data you entered or try other data";
+"accept" = "OK";
+"error" = "Error";
+"errorGettingLyrics" = "An error has occurred while consulting your lyrics, please try again";

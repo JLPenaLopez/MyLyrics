@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D2U-cL-WvX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--myLyrics-->
+        <scene sceneID="4Pa-n2-eaN">
+            <objects>
+                <viewController storyboardIdentifier="LyricDetailViewController" title="myLyrics" id="D2U-cL-WvX" customClass="LyricDetailViewController" customModule="MyLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hzq-Ak-QcI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="52D-xa-3Gy">
+                                <rect key="frame" x="16" y="60" width="382" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzT-26-wq1">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="lblDetailTitleSongLyric"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5f-7T-qLr">
+                                        <rect key="frame" x="0.0" y="32.5" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asX-XE-4YW">
+                                        <rect key="frame" x="0.0" y="60" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CpV-2D-uqT">
+                                <rect key="frame" x="16" y="156.5" width="382" height="689.5"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="viewLyricDetail">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="Dtd-sX-wqR" firstAttribute="bottom" secondItem="CpV-2D-uqT" secondAttribute="bottom" constant="16" id="0dO-TK-brD"/>
+                            <constraint firstItem="Dtd-sX-wqR" firstAttribute="trailing" secondItem="CpV-2D-uqT" secondAttribute="trailing" constant="16" id="PfE-WM-iTP"/>
+                            <constraint firstItem="Dtd-sX-wqR" firstAttribute="trailing" secondItem="52D-xa-3Gy" secondAttribute="trailing" constant="16" id="TTl-Ac-t6R"/>
+                            <constraint firstItem="52D-xa-3Gy" firstAttribute="top" secondItem="Dtd-sX-wqR" secondAttribute="top" constant="16" id="cE8-F4-MKu"/>
+                            <constraint firstItem="52D-xa-3Gy" firstAttribute="leading" secondItem="Dtd-sX-wqR" secondAttribute="leading" constant="16" id="f9t-CK-TMR"/>
+                            <constraint firstItem="CpV-2D-uqT" firstAttribute="leading" secondItem="Dtd-sX-wqR" secondAttribute="leading" constant="16" id="qBy-N0-HI9"/>
+                            <constraint firstItem="CpV-2D-uqT" firstAttribute="top" secondItem="52D-xa-3Gy" secondAttribute="bottom" constant="16" id="uDg-Mi-atH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dtd-sX-wqR"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblArtist" destination="h5f-7T-qLr" id="11S-qE-x2W"/>
+                        <outlet property="lblSearchDate" destination="asX-XE-4YW" id="2E6-Be-WNT"/>
+                        <outlet property="lblSongTitle" destination="VzT-26-wq1" id="hD5-9d-fPA"/>
+                        <outlet property="txtViewLyrics" destination="CpV-2D-uqT" id="S2d-eI-sDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-QO-SB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="138"/>
+        </scene>
+    </scenes>
+</document>

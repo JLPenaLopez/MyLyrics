@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  MyLyrics
+
+  Created by Jorge Luis Peña López on 12/09/20.
+  Copyright © 2020 Jorge Dev. All rights reserved.
+*/
+"myLyrics" = "Mis Líricas";
+"search" = "Buscar";
+"history" = "Historial";
+"lyric" = "Lírica";
+"searchLyric" = "Buscar lírica de canción";
+"artist" = "Artista";
+"song" = "Canción";
+"lastLyricFound" = "Última lírica encontrada";
+"songTitle" = "Titulo de canción";
+"searchDate" = "Fecha de búsqueda";
+"noInternetConnection" = "Tu conexión a internet es mala o inestable, por favor verifica tu conexión";
+"lyricNotFound" = "No se pudo encontrar la lírica de tu canción, por favor verifica los datos que ingresaste o intenta con otros datos";
+"accept" = "Aceptar";
+"error" = "Error";
+"errorGettingLyrics" = "Ha ocurrido un error consultando tus líricas, por favor vuelve a intentarlo";

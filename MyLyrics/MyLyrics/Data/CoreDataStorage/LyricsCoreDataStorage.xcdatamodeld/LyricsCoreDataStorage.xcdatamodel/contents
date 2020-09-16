@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LyricRequestEntity" representedClassName="LyricRequestEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="dateRequest" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LyricResponseEntity" inverseName="request" inverseEntity="LyricResponseEntity"/>
+    </entity>
+    <entity name="LyricResponseEntity" representedClassName="LyricResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="lyrics" optional="YES" attributeType="String"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LyricRequestEntity" inverseName="response" inverseEntity="LyricRequestEntity"/>
+    </entity>
+    <elements>
+        <element name="LyricRequestEntity" positionX="-238.07421875" positionY="7.90625" width="128" height="103"/>
+        <element name="LyricResponseEntity" positionX="-42.7890625" positionY="25.91015625" width="128" height="73"/>
+    </elements>
+</model>
